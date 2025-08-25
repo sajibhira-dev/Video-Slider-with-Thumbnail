@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Video Slider with Swiper</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .video-slider {
+      padding: 50px 20px;
+    }
+
+    .video-slider .container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0px auto;
+    }
+
+    .video-slider .main-slider {
+      position: relative;
+      height: 100%;
+    }
+
+    .video-slider .swiper {
+      width: 100%;
+      height: 100%;
+      padding: 0px 0px 50px;
+    }
+
+    .video-slider img {
+      display: block;
+    }
+
+    .video-slider .single-slider video,
+    .video-slider .single-slider .video-thumbnail img {
+      max-width: 100%;
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 28px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .video-slider .video-thumbnail {
+      width: 100%;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .video-slider .video-thumbnail .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    .video-slider .video-thumbnail .play-button svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-slider video {
+      width: 100%;
+      display: none;
+    }
+
+    .video-slider .slider-cantol {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .video-slider .swiper-pagination {
+      max-width: calc(100% - 100px);
+      width: 100%;
+      background-color: #eee;
+      border-radius: 4px;
+      height: 5px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-slider .swiper-pagination-progressbar-fill {
+      background-color: black;
+      border-radius: 4px;
+    }
+
+    .video-slider .slider-cantol .arrow-button {
+      display: flex;
+      gap: 10px;
+    }
+
+    .video-slider .slider-cantol .arrow-button * {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 0;
+      background-color: #fff;
+      box-shadow: 0 3px 10px 1px #00000015;
+      color: #9E9998;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+
+    .video-slider .slider-cantol .arrow-button *:after {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="video-slider">
+    <div class="container">
+      <div class="main-slider">
+        <div class="swiper swiper-slider">
+          <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="single-slider">
+                <div class="video-thumbnail" data-video="video1">
+                  <img src="https://cdn.shopify.com/s/files/1/0713/5533/4900/files/video_5.webp" alt="Video 1" />
+                  <div class="play-button">
+                    <svg viewBox="0 0 64 64">
+                      <path d="M39 28.333 28 35.667V21l11 7.333Z" />
+                    </svg>
+                  </div>
+                </div>
+                <video id="video1" controls>
+                  <source src="https://cdn.shopify.com/videos/c/o/v/f15a713b3a044d408840114582536080.mp4"
+                    type="video/mp4" />
+                </video>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="single-slider">
+                <div class="video-thumbnail" data-video="video2">
+                  <img src="https://cdn.shopify.com/s/files/1/0713/5533/4900/files/video_3.webp" alt="Video 2" />
+                  <div class="play-button">
+                    <svg viewBox="0 0 64 64">
+                      <path d="M39 28.333 28 35.667V21l11 7.333Z" />
+                    </svg>
+                  </div>
+                </div>
+                <video id="video2" controls>
+                  <source src="https://cdn.shopify.com/videos/c/o/v/9a31bb0912e1430fbd07d0c9bb60e2f5.mp4"
+                    type="video/mp4" />
+                </video>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="single-slider">
+                <div class="video-thumbnail" data-video="video3">
+                  <img src="https://cdn.shopify.com/s/files/1/0713/5533/4900/files/video_2.webp" alt="Video 3" />
+                  <div class="play-button">
+                    <svg viewBox="0 0 64 64">
+                      <path d="M39 28.333 28 35.667V21l11 7.333Z" />
+                    </svg>
+                  </div>
+                </div>
+                <video id="video3" controls>
+                  <source src="https://cdn.shopify.com/videos/c/o/v/fef50745ef6c4156966a6f628d312ecf.mp4"
+                    type="video/mp4" />
+                </video>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="single-slider">
+                <div class="video-thumbnail" data-video="video4">
+                  <img src="https://cdn.shopify.com/s/files/1/0713/5533/4900/files/video_1.webp" alt="Video 4" />
+                  <div class="play-button">
+                    <svg viewBox="0 0 64 64">
+                      <path d="M39 28.333 28 35.667V21l11 7.333Z" />
+                    </svg>
+                  </div>
+                </div>
+                <video id="video4" controls>
+                  <source src="https://cdn.shopify.com/videos/c/o/v/b3540e5cfd0147bbac5f67dc43d3d1eb.mp4"
+                    type="video/mp4" />
+                </video>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+              <div class="single-slider">
+                <div class="video-thumbnail" data-video="video5">
+                  <img src="https://cdn.shopify.com/s/files/1/0713/5533/4900/files/video_4.webp" alt="Video 5" />
+                  <div class="play-button">
+                    <svg viewBox="0 0 64 64">
+                      <path d="M39 28.333 28 35.667V21l11 7.333Z" />
+                    </svg>
+                  </div>
+                </div>
+                <video id="video5" controls>
+                  <source src="https://cdn.shopify.com/videos/c/o/v/0abac46bb10a4f7ba9f27116bdcae599.mp4"
+                    type="video/mp4" />
+                </video>
+              </div>
+            </div>
+
+          </div>
+          <div class="slider-cantol">
+            <div class="swiper-pagination"></div>
+            <div class="arrow-button">
+              <div class="swiper-button-prev">&#10094;</div>
+              <div class="swiper-button-next">&#10095;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Custom Script -->
+  <script>
+    const swiper = new Swiper('.swiper-slider', {
+      loop: false,
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      breakpoints: {
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        }
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    const thumbnails = document.querySelectorAll('.video-thumbnail');
+    let currentPlaying = null;
+
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+        const videoId = thumbnail.getAttribute('data-video');
+        const video = document.getElementById(videoId);
+
+
+        if (currentPlaying && currentPlaying !== video) {
+          currentPlaying.pause();
+          currentPlaying.style.display = 'none';
+          currentPlaying.previousElementSibling.style.display = 'block';
+        }
+
+        thumbnail.style.display = 'none ';
+        video.style.display = 'block';
+        video.play();
+
+        currentPlaying = video;
+      });
+    });
+
+    swiper.on('slideChange', () => {
+      if (currentPlaying) {
+        currentPlaying.pause();
+        currentPlaying.style.display = 'none';
+        currentPlaying.previousElementSibling.style.display = 'block';
+        currentPlaying = null;
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>
