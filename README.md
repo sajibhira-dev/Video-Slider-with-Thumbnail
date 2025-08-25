@@ -1,3 +1,3 @@
 # Video-Slider-with-Thumbnail
 
-Live Link: 
+Live Link: https://sajibhira-dev.github.io/Video-Slider-with-Thumbnail
